@@ -75,3 +75,86 @@ body {
 .website-name h4 {
   color: rgba(80, 220, 225);
 }
+
+/* website title and general Description */
+.title-combo > div {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* animation for Favourite Navigation bar */
+
+@keyframes flexible {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Favourite Text */
+
+.favs {
+  animation-name: flexible;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  perspective: 10000px;
+  transform-style: preserve-3d;
+  animation-iteration-count: infinite;
+}
+/* Search Bar */
+
+.search-bar {
+  width: 20%;
+  position: relative;
+}
+/* Changing Default Style Of Input Bar */
+.search-bar input {
+  width: 100%;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  border-radius: 18px;
+  padding: 5px;
+  font-weight: 500;
+  text-align: center;
+  transition: all ease-in-out 0.1s;
+}
+
+/* search Icon For Input Bar */
+.search-ico {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* mic icon for input */
+.mic-ico {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* search icon */
+.search-bar > div:nth-child(1) {
+  display: inline-block;
+  position: absolute;
+  width: min-content;
+  left: 5%;
+  top: 10%;
+  transition: all ease-in-out 0.1s;
+}
+/* mic icon */
+.search-bar > div:nth-child(3) {
+  display: inline-block;
+  position: absolute;
+  width: min-content;
+  right: 0%;
+  top: 10%;
+  transition: all ease-in-out 0.1s;
+}
+/* when the user clicks on the search bar, there should be no blue outlining */
+input:focus {
+  outline: none;
+}
