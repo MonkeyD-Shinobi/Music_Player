@@ -158,3 +158,35 @@ body {
 input:focus {
   outline: none;
 }
+/* Animation For Bell Image */
+@keyframes ringing_bell {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15%);
+  }
+}
+/* Notification Bell image */
+.notification-bell img {
+  width: 30px;
+  height: 30px;
+  animation-name: ringing_bell;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+/* Profile Picture Of the User */
+.profile-picture img {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+/* navigation bar is completed here */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* main */
