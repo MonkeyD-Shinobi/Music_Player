@@ -29,3 +29,49 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   color: white;
 }
+
+/* Top Navigation BAr */
+
+.navigation-bar {
+  height: auto;
+  width: auto;
+  background-image: linear-gradient(180deg, black, rgba(0, 0, 0, 0));
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+  transition: all ease-in-out 1s; /* when the navbar loads, every property transits for 1s */
+}
+/* All the .navigation-bar div should be placed side by side */
+
+.navigation-bar > div {
+  display: inline-block;
+}
+/* animation for the website logo */
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* website logo image */
+.website-logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  animation-name: rotating;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* Website Function */
+.website-name h4 {
+  color: rgba(80, 220, 225);
+}
