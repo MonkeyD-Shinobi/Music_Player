@@ -1,0 +1,192 @@
+:root {
+  /* trying various background colors and images and gradients */
+  /* --background-image: linear-gradient(-90deg, #2E3192 , #1BFFFF); */
+  /* --background-image: linear-gradient(-90deg, #D4145A , #FBB03B); */
+  /* --background-image: linear-gradient(-90deg, #662D8C , #ED1E79); */ /* best one till now */
+  /* --background-image: linear-gradient(-90deg, #FF512F , #DD2476); */
+  /* --background-image: linear-gradient(-90deg, #C33764 , #1D2671); */ /* suitable for the text */
+  /* --background-image: linear-gradient(90deg, #764BA2 , #667EEA); */
+  /* trying other combinations */
+  /* --background-image: linear-gradient(90deg, #8E0E00 , #1F1C18); */ /* it was also looking decent */
+  /* --background-image: linear-gradient(90deg, #fc00ff , #00dbde); */
+
+  /* now trying combination of 3 colors */
+  --background-image: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045);
+  /* --background-image: linear-gradient(90deg,#21D4FD, #B721FF); */
+  /* --background-image:url("background_image/2725544.jpg"); */
+  /* triend all the above gradients, finally liked the gradient vectored image */
+  /* --background-image: url(file:///E:/AASTUDY%20SHAHID/A%20Major%20Projrct/Major%20project%201/jr-korpa-9XngoIpxcEo-unsplash.jpg); */
+  --music-themes-background-image: linear-gradient(
+    90deg,
+    #833ab4,
+    #fd1d1d,
+    #fcb045
+  );
+}
+body {
+  background-image: var(--background-image);
+  margin: 0px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: white;
+}
+
+/* Top Navigation BAr */
+
+.navigation-bar {
+  height: auto;
+  width: auto;
+  background-image: linear-gradient(180deg, black, rgba(0, 0, 0, 0));
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+  transition: all ease-in-out 1s; /* when the navbar loads, every property transits for 1s */
+}
+/* All the .navigation-bar div should be placed side by side */
+
+.navigation-bar > div {
+  display: inline-block;
+}
+/* animation for the website logo */
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* website logo image */
+.website-logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  animation-name: rotating;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* Website Function */
+.website-name h4 {
+  color: rgba(80, 220, 225);
+}
+
+/* website title and general Description */
+.title-combo > div {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* animation for Favourite Navigation bar */
+
+@keyframes flexible {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Favourite Text */
+
+.favs {
+  animation-name: flexible;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  perspective: 10000px;
+  transform-style: preserve-3d;
+  animation-iteration-count: infinite;
+}
+/* Search Bar */
+
+.search-bar {
+  width: 20%;
+  position: relative;
+}
+/* Changing Default Style Of Input Bar */
+.search-bar input {
+  width: 100%;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  border-radius: 18px;
+  padding: 5px;
+  font-weight: 500;
+  text-align: center;
+  transition: all ease-in-out 0.1s;
+}
+
+/* search Icon For Input Bar */
+.search-ico {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* mic icon for input */
+.mic-ico {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* search icon */
+.search-bar > div:nth-child(1) {
+  display: inline-block;
+  position: absolute;
+  width: min-content;
+  left: 5%;
+  top: 10%;
+  transition: all ease-in-out 0.1s;
+}
+/* mic icon */
+.search-bar > div:nth-child(3) {
+  display: inline-block;
+  position: absolute;
+  width: min-content;
+  right: 0%;
+  top: 10%;
+  transition: all ease-in-out 0.1s;
+}
+/* when the user clicks on the search bar, there should be no blue outlining */
+input:focus {
+  outline: none;
+}
+/* Animation For Bell Image */
+@keyframes ringing_bell {
+  0% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-15%);
+  }
+}
+/* Notification Bell image */
+.notification-bell img {
+  width: 30px;
+  height: 30px;
+  animation-name: ringing_bell;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+/* Profile Picture Of the User */
+.profile-picture img {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+
+/* navigation bar is completed here */
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* main */
